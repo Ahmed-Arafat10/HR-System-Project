@@ -1,5 +1,5 @@
 <?php
-include '/opt/lampp/htdocs/HR-System-Project/ConfigDB.php';
+include '/HR/ConfigDB.php';
 
 
  error_reporting(0);
@@ -16,7 +16,7 @@ else print_message("Faild Deleting From DataBase");
 
 
 if($_SESSION['admin'] || $_SESSION['HR']){} 
-else header('location:/opt/lampp/htdocs/HR-System-Project/Login.php');
+else header('location:/HR/Login.php');
 
 ?>
 
@@ -33,7 +33,7 @@ else header('location:/opt/lampp/htdocs/HR-System-Project/Login.php');
 
 <body>
 <?php
-include '/opt/lampp/htdocs/HR-System-Project/Nav.php';
+include '/HR/Nav.php';
 ?>   
 
 <div class="container col-md-6 text-center mt-5">
@@ -50,8 +50,8 @@ include '/opt/lampp/htdocs/HR-System-Project/Nav.php';
     <td> <?php echo $data['id']; ?> </td>
     <td> <?php echo $data['name']; ?> </td>
     <?php if (isset($_SESSION['admin'])) : ?>
-    <td><a href="/opt/lampp/htdocs/HR-System-Project/department/add_department.php?edit=<?php echo $data['id']?> " class="btn btn-info">Edit</a></td>
-    <td><a href="/opt/lampp/htdocs/HR-System-Project/department/list_department.php?delete=<?php echo $data['id']?> " class="btn btn-danger" onclick=" return confirm('ARE YOU SURE ??')">Delete</a></td>
+    <td><a href="/HR/department/add_department.php?edit=<?php echo $data['id']?> " class="btn btn-info">Edit</a></td>
+    <td><a href="/HR/department/list_department.php?delete=<?php echo $data['id']?> " class="btn btn-danger" onclick=" return confirm('ARE YOU SURE ??')">Delete</a></td>
     <?php endif; ?>
  </tr>
 
