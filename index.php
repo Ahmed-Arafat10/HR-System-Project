@@ -1,6 +1,6 @@
 <?php
-include '/HR-System-Project/ConfigDB.php';
-include '/HR-System-Project/Nav.php';
+include '/HR/ConfigDB.php';
+include '/HR/Nav.php';
 ?>
 
 
