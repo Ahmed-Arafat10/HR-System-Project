@@ -1,5 +1,5 @@
 <?php
-include '/opt/lampp/htdocs/HR-System-Project/ConfigDB.php';
+include '/HR/ConfigDB.php';
 
 //If User click on Submit Buttom after entering data of employee
 if(isset($_POST['send'])){
@@ -34,7 +34,7 @@ if(isset($_GET['edit'])){
 }
 
 if($_SESSION['admin']){} 
-else header('location:/opt/lampp/htdocs/HR-System-Project/Admins/Login.php');
+else header('location:/HR/Admins/Login.php');
 
 ?>
 <!-- HTML CODE -->
@@ -49,7 +49,7 @@ else header('location:/opt/lampp/htdocs/HR-System-Project/Admins/Login.php');
 
 <body>
 <?php
-include '/opt/lampp/htdocs/HR-System-Project/Nav.php';
+include '/HR/Nav.php';
 ?>
     <div class="container col-md-6 mt-5">
         <form method="POST" enctype="multipart/form-data">
