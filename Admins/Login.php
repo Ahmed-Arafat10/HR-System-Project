@@ -1,5 +1,5 @@
 <?php
-include '/xampp/htdocs/HRSystem/ConfigDB.php';
+include '/opt/lampp/htdocs/HR-System-Project/ConfigDB.php';
 
 if(isset($_POST['submit_admin'])){
 $admin_name=$_POST['admin_name'];
@@ -9,7 +9,7 @@ $ch=mysqli_query($connect_to_DB,$check);
 $is_exist = mysqli_num_rows($ch);
 if($is_exist > 0) {
 $_SESSION['admin']=$admin_name;
-header('location:/HRSystem/employee/list_employee.php');
+header('location:/opt/lampp/htdocs/HR-System-Project/employee/list_employee.php');
 }
 else print_message("Not Admin");
 }
@@ -24,7 +24,7 @@ if(isset($_POST['submit_hr'])){
     $row=mysqli_fetch_assoc($s);
     if($row['department'] == 2){
       $_SESSION['HR']=$hr_name;
-header('location:/HRSystem/employee/list_employee.php');
+header('location:/opt/lampp/htdocs/HR-System-Project/employee/list_employee.php');
     }
   }
   else print_message("You are not HR member");
@@ -48,7 +48,7 @@ header('location:/HRSystem/employee/list_employee.php');
 <body>
 
   <?php
-  include '/xampp/htdocs/HRSystem/Nav.php';
+  include '/opt/lampp/htdocs/HR-System-Project/Nav.php';
   ?>
   <div class="container col-md-6 text-center mt-5">
     <div style="margin:auto; width:50%">
