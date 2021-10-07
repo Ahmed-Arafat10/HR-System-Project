@@ -1,6 +1,6 @@
 <?php
-include '/opt/lampp/htdocs/HR-System-Project/ConfigDB.php';
-include '/opt/lampp/htdocs/HR-System-Project/Nav.php';
+include '/HR-System-Project/ConfigDB.php';
+include '/HR-System-Project/Nav.php';
 ?>
 
 
