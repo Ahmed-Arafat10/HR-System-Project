@@ -3,7 +3,7 @@
 if (isset($_GET['logout'])) {
   session_unset();
   session_destroy();
-  header('location:/HRSystem/index.php');
+  header('location:/opt/lampp/htdocs/HR-System-Project/index.php');
 }
 // error_reporting(0);
 ?>
@@ -32,7 +32,7 @@ if (isset($_GET['logout'])) {
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light " style="background-color:darkcyan;">
-    <a class="navbar-brand" href="/HRSystem/index.php">Home</a>
+    <a class="navbar-brand" href="/opt/lampp/htdocs/HR-System-Project/index.php">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,24 +40,24 @@ if (isset($_GET['logout'])) {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/HRSystem/employee/list_employee.php">Employee<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/opt/lampp/htdocs/HR-System-Project/employee/list_employee.php">Employee<span class="sr-only">(current)</span></a>
         </li>
         <?php if (isset($_SESSION['admin'])) : ?>
           <li class="nav-item">
-            <a class="nav-link" href="/HRSystem/employee/add_employee.php">Add Employee</a>
+            <a class="nav-link" href="/opt/lampp/htdocs/HR-System-Project/employee/add_employee.php">Add Employee</a>
           </li>
         <?php endif; ?>
         <li class="nav-item">
-          <a class="nav-link" href="/HRSystem/department/list_department.php">Department</a>
+          <a class="nav-link" href="/opt/lampp/htdocs/HR-System-Project/department/list_department.php">Department</a>
           <?php if (isset($_SESSION['admin'])) :  ?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/HRSystem/department/add_department.php">Add Department</a>
+          <a class="nav-link" href="/opt/lampp/htdocs/HR-System-Project/department/add_department.php">Add Department</a>
         </li>
       <?php endif; ?>
       <?php if (!isset($_SESSION['admin']) && !isset($_SESSION['HR'])) : ?>
         <li class="nav-item">
-          <a class="btn btn-info" href="/HRSystem/Admins/Login.php">Login</a>
+          <a class="btn btn-info" href="/opt/lampp/htdocs/HR-System-Project/Admins/Login.php">Login</a>
         </li>
       <?php endif; ?>
       <?php if (isset($_SESSION['admin']) || isset($_SESSION['HR'])) : ?>
