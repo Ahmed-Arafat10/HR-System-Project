@@ -1,5 +1,5 @@
 <?php
-include '/xampp/htdocs/HRSystem/ConfigDB.php';
+include '/opt/lampp/htdocs/HR-System-Project/ConfigDB.php';
 
 
 //If User click on Submit Buttom after entering data of employee
@@ -39,7 +39,7 @@ if(isset($_GET['edit'])){
 
 }
 if($_SESSION['admin']){} 
-else header('location:/HRSystem/Admins/Login.php');
+else header('location:/opt/lampp/htdocs/HR-System-Project/Admins/Login.php');
 
 
 
