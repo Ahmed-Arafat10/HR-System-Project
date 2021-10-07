@@ -5,10 +5,8 @@ $user = "root";
 $password = "";
 $database = "hr system";
 $connect_to_DB = mysqli_connect($host,$user,$password,$database); //Build-in Function
-// if($connect_to_DB)
-// echo "Done conneting to DataBase";
-// else 
-// echo "Failed conneting to DataBase";
+if($connect_to_DB) echo "Done conneting to DataBase";
+else echo "Failed conneting to DataBase";
 
 session_start();
 
