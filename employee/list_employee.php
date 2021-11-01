@@ -1,5 +1,5 @@
 <?php
-include '/HR/ConfigDB.php';
+include '../ConfigDB.php';
 
 
 error_reporting(0);
@@ -31,7 +31,7 @@ else header('location:/HR/Admins/Login.php');
 
 <body>
 <?php
-include '/HR/Nav.php';
+include '../Nav.php';
 ?>   
 
 <div class="container col-md-6 text-center mt-5">

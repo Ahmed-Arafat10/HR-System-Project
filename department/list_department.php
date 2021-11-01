@@ -1,5 +1,5 @@
 <?php
-include '/HR/ConfigDB.php';
+include '../ConfigDB.php';
 
 
  error_reporting(0);
@@ -7,7 +7,7 @@ include '/HR/ConfigDB.php';
 
 if(isset($_GET['delete'])){
 $id = $_GET['delete'] ;
-$delete="DELETE FROM employee WHERE id= $id";
+$delete="DELETE FROM `departments` WHERE id= $id";
 $d_query=mysqli_query($connect_to_DB,$delete);
 if($d_query) print_message("Done Deleting From DataBase");
 else print_message("Faild Deleting From DataBase");
@@ -16,7 +16,7 @@ else print_message("Faild Deleting From DataBase");
 
 
 if($_SESSION['admin'] || $_SESSION['HR']){} 
-else header('location:/HR/Login.php');
+else header('location:/HR/Admins/Login.php');
 
 ?>
 
@@ -33,7 +33,7 @@ else header('location:/HR/Login.php');
 
 <body>
 <?php
-include '/HR/Nav.php';
+include '../Nav.php';
 ?>   
 
 <div class="container col-md-6 text-center mt-5">

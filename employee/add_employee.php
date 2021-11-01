@@ -1,5 +1,5 @@
 <?php
-include '/HR/ConfigDB.php';
+include '../ConfigDB.php';
 
 
 //If User click on Submit Buttom after entering data of employee
@@ -56,7 +56,7 @@ else header('location:/HR/Admins/Login.php');
 
 <body>
 <?php
-include '/HR/Nav.php';
+include '../Nav.php';
 ?>
     <div class="container col-md-6 mt-5">
         <form method="POST" enctype="multipart/form-data">
